@@ -7,9 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.rxexample.customDataType.CustomDataTypeRXActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-	Button btn_DisposableRX, btn_FilterRx, btn_DisposableObserver;
+	Button btn_DisposableRX, btn_FilterRx, btn_DisposableObserver, btn_CustomDataType;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 		btn_DisposableRX = findViewById(R.id.btn_DisposableRX);
 		btn_FilterRx = findViewById(R.id.btn_FilterRx);
 		btn_DisposableObserver = findViewById(R.id.btn_DisposableObserver);
+		btn_CustomDataType = findViewById(R.id.btn_CustomDataType);
 
 		btn_DisposableRX.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -38,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View view) {
 				startActivity(new Intent(MainActivity.this, DisposableObserverRX.class));
+			}
+		});
+
+		btn_CustomDataType.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				startActivity(new Intent(MainActivity.this, CustomDataTypeRXActivity.class));
 			}
 		});
 

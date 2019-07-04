@@ -22,6 +22,7 @@ public class DisposableObserverRX extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_disposable_observer_rx);
+
 		Observable<String> animalsObservable = getAnimalsObservable();
 
 		DisposableObserver<String> animalsObserver = getAnimalsObserver();
