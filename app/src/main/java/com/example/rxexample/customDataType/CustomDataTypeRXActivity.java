@@ -69,7 +69,7 @@ public class CustomDataTypeRXActivity extends AppCompatActivity {
 	}
 
 	private Observable<Note> getNotesObservable() {
-		final List<Note> notes = prepareNotes();
+		final List<Note> notes = prepareNotes();   // Here prepareNotes() have data ArrayList
 
 		return Observable.create(new ObservableOnSubscribe<Note>() {
 			@Override
@@ -86,6 +86,7 @@ public class CustomDataTypeRXActivity extends AppCompatActivity {
 			}
 		});
 	}
+
 
 	private List<Note> prepareNotes() {
 		List<Note> notes = new ArrayList<>();
