@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-	Button btn_DisposableRX,btn_FilterRx;
+	Button btn_DisposableRX, btn_FilterRx, btn_DisposableObserver;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
 		btn_DisposableRX = findViewById(R.id.btn_DisposableRX);
 		btn_FilterRx = findViewById(R.id.btn_FilterRx);
+		btn_DisposableObserver = findViewById(R.id.btn_DisposableObserver);
 
 		btn_DisposableRX.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -33,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 
+		btn_DisposableObserver.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				startActivity(new Intent(MainActivity.this, DisposableObserverRX.class));
+			}
+		});
 
 
 	}
