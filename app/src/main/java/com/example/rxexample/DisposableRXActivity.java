@@ -21,7 +21,7 @@ public class DisposableRXActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_disposable_rx);
 
 		// observable
-		Observable<String> animalsObservable = getAnimalsObservable();
+		Observable<String> animalsObservable = getAnimalsObservable(); // Observable need Data Source.
 
 		// observer
 		Observer<String> animalsObserver = getAnimalsObserver();

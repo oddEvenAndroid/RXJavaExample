@@ -38,6 +38,7 @@ public class RXFilterActivity extends AppCompatActivity {
 					}
 				})
 				.subscribe(animalsObserver);
+
 	}
 
 	private Observer<String> getAnimalsObserver() {
